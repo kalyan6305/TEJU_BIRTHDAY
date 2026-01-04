@@ -40,6 +40,17 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  /* Mobile padding fix */
+  padding: 0;
+  margin: 0;
+}
+
+/* Responsive Typography Scale */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+    /* Scale down base font size */
+  }
 }
 
 h1,

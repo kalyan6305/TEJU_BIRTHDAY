@@ -6,10 +6,18 @@
 
 .wishes-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Fits mobile better */
     gap: 2rem;
     max-width: 1000px;
     margin: 0 auto;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .wishes-section {
+        padding: 2rem 1rem;
+    }
 }
 
 .wish-card {

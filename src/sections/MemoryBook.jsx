@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useState, useEffect } from 'react';
 import HTMLFlipBook from 'react-pageflip';
 import './MemoryBook.css';
 import { motion } from 'framer-motion';
@@ -28,6 +28,30 @@ const Page = forwardRef((props, ref) => {
 });
 
 const MemoryBook = () => {
+    // Dynamic sizing for mobile responsiveness
+    const [bookSize, setBookSize] = useState({ width: 350, height: 500 });
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth < 500) {
+                // Mobile dimensions
+                setBookSize({ width: 280, height: 400 });
+            } else if (window.innerWidth < 768) {
+                // Tablet dimensions
+                setBookSize({ width: 300, height: 450 });
+            } else {
+                // Desktop dimensions
+                setBookSize({ width: 350, height: 500 });
+            }
+        };
+
+        // Initial check
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     // using explicit dimensions to ensure it renders correctly
     return (
         <section className="book-section">
@@ -42,8 +66,8 @@ const MemoryBook = () => {
 
             <div className="book-container">
                 <HTMLFlipBook
-                    width={350}
-                    height={500}
+                    width={bookSize.width}
+                    height={bookSize.height}
                     showCover={true}
                     mobileScrollSupport={true}
                     className="flip-book"

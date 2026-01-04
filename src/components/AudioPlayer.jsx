@@ -28,12 +28,7 @@ const AudioPlayer = () => {
     };
 
     return (
-        <div style={{
-            position: 'fixed',
-            bottom: '20px',
-            right: '20px',
-            zIndex: 100
-        }}>
+        <div className="audio-player-container">
             {/* Romantic Piano Birthday Theme - Using a reliable raw github URL or similar for stability */}
             <audio
                 ref={audioRef}

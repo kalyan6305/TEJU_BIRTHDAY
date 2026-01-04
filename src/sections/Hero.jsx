@@ -97,7 +97,7 @@ const Hero = ({ onComplete }) => {
                     {step === 2 && (
                         <motion.div key="step2" variants={pageVariants} initial="initial" animate="in" exit="out" transition={pageTransition} style={{ textAlign: 'center' }}>
                             <div style={{ fontSize: '4rem', marginBottom: '1rem' }}>✨</div>
-                            <h2 className="main-title" style={{ fontSize: 'clamp(2rem, 5vw, 4rem)' }}>It's Your Special Day Yeyey!</h2>
+                            <h2 className="main-title">It's Your Special Day Yeyey!</h2>
                             <button className="hero-btn" onClick={nextStep} style={{ marginTop: '2rem' }}>Next ➡️</button>
                         </motion.div>
                     )}
@@ -105,7 +105,7 @@ const Hero = ({ onComplete }) => {
                     {/* PAGE 3: Question */}
                     {step === 3 && (
                         <motion.div key="step3" variants={pageVariants} initial="initial" animate="in" exit="out" transition={pageTransition} style={{ textAlign: 'center' }}>
-                            <h2 className="main-title" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)' }}>Do you wanna see what I made?? 🎁</h2>
+                            <h2 className="main-title">Do you wanna see what I made?? 🎁</h2>
                             <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center', marginTop: '3rem' }}>
                                 <button className="hero-btn" onClick={nextStep}>Yes! 😍</button>
                                 <button className="hero-btn" style={{ background: '#ccc', transform: 'scale(0.9)' }} onClick={() => alert("You have to say YES! 😜")}>No 😢</button>
@@ -117,7 +117,7 @@ const Hero = ({ onComplete }) => {
                     {step === 4 && (
                         <motion.div key="step4" variants={pageVariants} initial="initial" animate="in" exit="out" transition={pageTransition} style={{ textAlign: 'center' }}>
                             <div style={{ fontSize: '4rem', marginBottom: '1rem' }}>👀</div>
-                            <h2 className="main-title" style={{ fontSize: 'clamp(2rem, 5vw, 4rem)' }}>Have a look at it, Madam Jiii</h2>
+                            <h2 className="main-title">Have a look at it, Madam Jiii</h2>
                             <button className="hero-btn" onClick={nextStep} style={{ marginTop: '2rem' }}>Let's Go 🚀</button>
                         </motion.div>
                     )}
@@ -125,7 +125,7 @@ const Hero = ({ onComplete }) => {
                     {/* PAGE 5: Finale with Cake */}
                     {step === 5 && (
                         <motion.div key="step5" variants={pageVariants} initial="initial" animate="in" exit="out" transition={pageTransition} style={{ textAlign: 'center' }}>
-                            <h2 className="main-title" style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)' }}>Make a Wish! 🎂</h2>
+                            <h2 className="main-title">Make a Wish! 🎂</h2>
                             <p className="sub-title">Blow out the candles!</p>
 
                             {/* Reverted: onAllBlown calls handleFinalStart directly */}

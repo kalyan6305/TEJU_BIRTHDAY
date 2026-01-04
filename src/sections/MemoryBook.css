@@ -108,3 +108,18 @@
     text-transform: uppercase;
     font-family: var(--font-main);
 }
+
+@media (max-width: 600px) {
+    .section-title {
+        font-size: 2.5rem;
+        /* Smaller title on mobile */
+    }
+
+    .cover-title {
+        font-size: 2.5rem;
+    }
+
+    .page-text {
+        font-size: 1.2rem;
+    }
+}
