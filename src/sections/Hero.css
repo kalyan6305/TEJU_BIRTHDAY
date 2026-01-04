@@ -1,0 +1,116 @@
+.hero-section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    padding: 2rem;
+    overflow: hidden;
+    background-color: #fcf8e3;
+    /* Light Cream */
+    color: #5a3e36;
+}
+
+.hero-content {
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.main-title {
+    font-family: 'Great Vibes', cursive;
+    /* Responsive single line sizing */
+    font-size: clamp(3rem, 8vw, 7rem);
+    color: #5a3e36;
+    margin-bottom: 0;
+    line-height: 1.2;
+    font-weight: 400;
+    white-space: nowrap;
+    /* Force single line */
+}
+
+.title-accent {
+    color: #e91e63;
+    /* Pink */
+}
+
+.sub-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.2rem;
+    color: #8b5e52;
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+    max-width: 600px;
+}
+
+.hero-btn {
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    border: none;
+    color: white;
+    border-radius: 50px;
+    box-shadow: 0 10px 20px rgba(255, 94, 98, 0.3);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+}
+
+.hero-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(255, 94, 98, 0.5);
+    background: linear-gradient(to right, #ff5e62, #ff9966);
+}
+
+/* Floating Hearts & Butterflies */
+.floating-element {
+    position: absolute;
+    top: 0;
+    /* Ensure anchor */
+    pointer-events: none;
+    animation-name: floatUp;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    /* duration and delay set via inline style */
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(110vh) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.8;
+    }
+
+    90% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.vertical-line {
+    width: 2px;
+    height: 80px;
+    background-color: #8b5e52;
+    margin-left: 1rem;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .vertical-line {
+        display: none;
+        /* Hide on mobile to save space */
+    }
+
+    /* Font clamping handles the main title size */
+}

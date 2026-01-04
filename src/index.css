@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Outfit:wght@300;500;700;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+
+:root {
+  /* Updated to Romantic/Cream Theme */
+  --bg-dark: #fcf8e3;
+  /* Light Cream Main BG */
+  --bg-gradient: linear-gradient(180deg, #fcf8e3, #fae3d9);
+  /* Soft fade */
+
+  --primary: #e91e63;
+  /* Pink */
+  --secondary: #8b5e52;
+  /* Warm Brown */
+  --accent: #ff9966;
+  /* Soft Orange/Peach */
+
+  --text-main: #5a3e36;
+  /* Dark Brown Text */
+  --text-muted: #8b5e52;
+
+  --font-main: 'Outfit', sans-serif;
+  --font-display: 'Great Vibes', cursive;
+
+  --card-bg: rgba(255, 255, 255, 0.6);
+  --card-border: rgba(233, 30, 99, 0.2);
+  --glass: blur(10px);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--bg-dark);
+  background-image: var(--bg-gradient);
+  color: var(--text-main);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  /* Cursive fonts often look better regular weight */
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-main);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
